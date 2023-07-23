@@ -20,20 +20,20 @@ const SecondPage: React.FC = () => {
     const departmentsData: Department[] = [
       {
         id: 1,
-        name: 'Department A',
+        name: 'customer_service',
         subDepartments: [
-          { id: 11, name: 'Sub-Department A1', selected: false },
-          { id: 12, name: 'Sub-Department A2', selected: false },
+          { id: 11, name: 'support', selected: false },
+          { id: 12, name: 'customer_success', selected: false },
         ],
         selected: false,
       },
       {
         id: 2,
-        name: 'Department B',
+        name: 'design',
         subDepartments: [
-          { id: 21, name: 'Sub-Department B1', selected: false },
-          { id: 22, name: 'Sub-Department B2', selected: false },
-          { id: 23, name: 'Sub-Department B3', selected: false },
+          { id: 21, name: 'graphic_design', selected: false },
+          { id: 22, name: 'product_design', selected: false },
+          { id: 23, name: 'web_design', selected: false },
         ],
         selected: false,
       },

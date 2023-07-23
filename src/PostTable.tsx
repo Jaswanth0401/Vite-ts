@@ -1,35 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { DataGrid, GridColumns, GridRowData } from '@mui/x-data-grid';
-import Post from './Post';
+import React from 'react';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import Post  from './Post'; // Import the actual Post type from its file
 
-const PostTable: React.FC = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+interface PostTableProps {
+  data: Post[]; // Use the actual Post type here
+}
 
-  useEffect(() => {
-    fetchPosts();
-  }, []);
-
-  const fetchPosts = async () => {
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-      const data = await response.json();
-      setPosts(data);
-    } catch (error) {
-      console.error('Error fetching posts:', error);
-    }
-  };
-
-  const columns: GridColumns = [
+const PostTable: React.FC<PostTableProps> = ({ data }) => {
+  const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'title', headerName: 'Title', width: 300 },
     { field: 'body', headerName: 'Body', width: 600 },
   ];
 
-  const rows: GridRowData[] = posts.map((post) => ({ id: post.id, title: post.title, body: post.body }));
+  const rows = data.map((post) => ({
+    id: post.id.toString(), // Convert id to a string
+    title: post.title,
+    body: post.body,
+  }));
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGrid rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5, 10, 20]} />
+      <DataGrid rows={rows} columns={columns} />
     </div>
   );
 };
