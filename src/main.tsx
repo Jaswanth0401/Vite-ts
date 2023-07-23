@@ -8,7 +8,7 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<App/>} />
-      <Route path="/second-page" element={<SecondPage/>} />
+      <Route path="/second-page" element ={<SecondPage/>} />
     </Routes>
   </Router>,
   document.getElementById('root')
