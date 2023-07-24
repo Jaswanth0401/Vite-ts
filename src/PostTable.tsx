@@ -1,9 +1,9 @@
 import React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import Post  from './Post'; // Import the actual Post type from its file
+import Post  from './Post'; 
 
 interface PostTableProps {
-  data: Post[]; // Use the actual Post type here
+  data: Post[];
 }
 
 const PostTable: React.FC<PostTableProps> = ({ data }) => {
@@ -14,7 +14,7 @@ const PostTable: React.FC<PostTableProps> = ({ data }) => {
   ];
 
   const rows = data.map((post) => ({
-    id: post.id.toString(), // Convert id to a string
+    id: post.id.toString(), 
     title: post.title,
     body: post.body,
   }));

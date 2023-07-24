@@ -15,7 +15,6 @@ const SecondPage: React.FC = () => {
       .then((data) => setPosts(data))
       .catch((error) => console.log('Error fetching posts:', error));
 
-    // Sample JSON data for departments and sub-departments
     const departmentsData: Department[] = [
       {
         id: 1,
@@ -25,7 +24,7 @@ const SecondPage: React.FC = () => {
           { id: 12, name: 'customer_success', selected: false },
         ],
         selected: false,
-        showSubDepartments: false, // Add the 'showSubDepartments' property here
+        showSubDepartments: false, 
       },
       {
         id: 2,
