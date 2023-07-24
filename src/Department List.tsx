@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Button, Collapse, List, ListItem, ListItemIcon, ListItemText, Checkbox } from '@mui/material';
 import { Department, SubDepartment } from './models';
 
-interface DepartmentTableProps {
+interface DepartmentListProps {
   data: Department[];
 }
 
-const DepartmentTable: React.FC<DepartmentTableProps> = ({ data }) => {
+const DepartmentList: React.FC<DepartmentListProps> = ({ data }) => {
   const [departments, setDepartments] = useState<Department[]>(data);
 
   const handleDepartmentClick = (departmentId: number) => {
@@ -87,4 +87,4 @@ const DepartmentTable: React.FC<DepartmentTableProps> = ({ data }) => {
   );
 };
 
-export default DepartmentTable;
+export default DepartmentList;
