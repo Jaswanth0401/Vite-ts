@@ -1,4 +1,3 @@
-// SecondPage.tsx
 import React, { useState, useEffect } from 'react';
 import PostTable from './PostTable';
 import DepartmentTable from './Department List';

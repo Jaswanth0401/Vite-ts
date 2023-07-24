@@ -1,4 +1,3 @@
-// DepartmentTable.tsx
 import React, { useState } from 'react';
 import { Button, Collapse, List, ListItem, ListItemIcon, ListItemText, Checkbox } from '@mui/material';
 import { Department, SubDepartment } from './models';
