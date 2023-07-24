@@ -26,6 +26,7 @@ const SecondPage: React.FC = () => {
           { id: 12, name: 'customer_success', selected: false },
         ],
         selected: false,
+        showSubDepartments: false, // Add the 'showSubDepartments' property here
       },
       {
         id: 2,
@@ -36,6 +37,7 @@ const SecondPage: React.FC = () => {
           { id: 23, name: 'web_design', selected: false },
         ],
         selected: false,
+        showSubDepartments: false, // Add the 'showSubDepartments' property here
       },
     ];
 

@@ -4,7 +4,7 @@ export interface Department {
   name: string;
   subDepartments: SubDepartment[];
   selected: boolean;
-  showSubDepartments: boolean; // Add this property to indicate if sub-departments are shown or hidden
+  showSubDepartments: boolean; 
 }
 
 export interface SubDepartment {
